@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MEGA FARAON</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="/logo.png" alt="Mega Faraon Logo" class="logo" />
+      <div class="slogan">
+        🛡 ABIERTO 24 HORAS - ATENCIÓN DIRECTA - SEGURIDAD Y COMPROMISO
+      </div>
+
+      <div class="games">
+        <img src="/sweet-bonanza.png" alt="Sweet Bonanza" />
+        <img src="/great-rhino.png" alt="Great Rhino" />
+        <img src="/gates-olympus.png" alt="Gates of Olympus" />
+        <img src="/sugar-rush.png" alt="Sugar Rush" />
+      </div>
+
+      <form class="contact-form" onsubmit="sendMessage(); return false;">
+        <input type="text" id="name" placeholder="Completa con tu NOMBRE y dale a ENVIAR" required />
+        <button type="submit">
+          <img src="/whatsapp-icon.png" alt="WhatsApp" />
+          ENVIAR MENSAJE
+        </button>
+      </form>
+
+      <div class="banks">
+        <img src="/bna.png" />
+        <img src="/naranja.png" />
+        <img src="/provincia.png" />
+        <img src="/uala.png" />
+        <img src="/mercadopago.png" />
+        <img src="/brubank.png" />
+        <img src="/prex.png" />
+      </div>
+    </div>
+
+    <script>
+      function sendMessage() {
+        const name = document.getElementById("name").value.trim();
+        if (name) {
+          const phone = "5491155024153";
+          const message = `Hola! Mi nombre es ${name}`;
+          window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
+        }
+      }
+    </script>
+  </body>
+</html>
